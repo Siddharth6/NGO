@@ -8,7 +8,7 @@ if(!isset($_SESSION['user'])){
 <?php
 $link = mysqli_connect('localhost','root','','ngo') or die("Error ".mysqli_error($link));
 if(count($_POST)>0) {
-mysqli_query($link,"UPDATE login_users set id='" . $_POST['id'] . "', user='" . $_POST['title'] . "', password='" . $_POST['password1'] . "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($link,"UPDATE login_users set id='" . $_POST['id'] . "', user='" . $_POST['title'] . "', password='" . password_hash($_POST['password1'],PASSWORD_DEFAULT) . "' WHERE id='" . $_POST['id'] . "'");
 
 
 $message = "

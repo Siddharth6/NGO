@@ -1,48 +1,73 @@
-<html>  
-    <head>  
-        <title>PHP login system</title>  
+<?php  
+ $connect = mysqli_connect("localhost", "root", "", "ngo");  
+ session_start();  
+ if(isset($_SESSION["user"]))  
+ {  
+      header("location:das.php");  
+ }  
 
-        <link rel = "stylesheet" type = "text/css" href = "css/style.css">   
-    </head>  
-    <body>  
-        <div id = "frm">  
-            <h1>Login</h1>  
-            <form name="f1" action = "php/login.php" onsubmit = "return validation()" method = "POST">  
-                <p>  
-                    <label> UserName: </label>  
-                    <input type = "text" id ="user" name  = "user" />  
-                </p>  
-                <p>  
-                    <label> Password: </label>  
-                    <input type = "password" id ="pass" name  = "pass" />  
-                </p>  
-                <p>     
-                    <input type =  "submit" id = "btn" value = "Login" />  
-                </p>  
-            </form>  
-        </div>  
-       
-        <script>  
-                function validation()  
+ if(isset($_POST["login"]))  
+ {  
+      if(empty($_POST["username"]) || empty($_POST["password"]))  
+      {  
+           echo '<script>alert("Both Fields are required")</script>';  
+      }  
+      else  
+      {  
+           $username = mysqli_real_escape_string($connect, $_POST["username"]);  
+           $password = mysqli_real_escape_string($connect, $_POST["password"]);  
+           $query = "SELECT * FROM login_users WHERE user = '$username'";  
+           $result = mysqli_query($connect, $query);  
+           if(mysqli_num_rows($result) > 0)  
+           {  
+                while($row = mysqli_fetch_array($result))  
                 {  
-                    var id=document.f1.user.value;  
-                    var ps=document.f1.pass.value;  
-                    if(id.length=="" && ps.length=="") {  
-                        alert("User Name and Password fields are empty");  
-                        return false;  
-                    }  
-                    else  
-                    {  
-                        if(id.length=="") {  
-                            alert("User Name is empty");  
-                            return false;  
-                        }   
-                        if (ps.length=="") {  
-                        alert("Password field is empty");  
-                        return false;  
-                        }  
-                    }                             
+                     if(password_verify($password, $row["password"]))  
+                     {  
+                          //return true;  
+                          $_SESSION["user"] = $username;  
+                          header("location:das.php");  
+                     }  
+                     else  
+                     {  
+                          //return false;  
+                          echo '<script>alert("Wrong User Details")</script>';  
+                     }  
                 }  
-            </script>  
-    </body>     
-    </html>  
+           }  
+           else  
+           {  
+                echo '<script>alert("Wrong User Details")</script>';  
+           }  
+      }  
+ }  
+  ?>  
+ <?php include("php/links.php");?>
+      
+           
+           
+            <div class="container card border-primary  mb-3" style="width:500px;margin-top:12rem;">  
+            <img src="img/favicon1.png"  class="img-thumbnail img-fluid" style="width:100px;margin-top:16px;margin-left:170px;"/>
+            
+                <h3 class="text-center text-primary pt-4">AVADH JANKALYAN SAMITI</h3>  
+                <br />  
+                  
+                <h3 align="center">Login</h3>  
+                <br />  
+                <form method="post" action="">  
+                     <label>Enter Username</label>  
+                     <input type="text" name="username" class="form-control" />  
+                     <br />  
+                     <label>Enter Password</label>  
+                     <input type="password" name="password" class="form-control" />  
+                     <br />  
+                     <input type="submit" name="login" value="Login" class="btn btn-info" />  
+                     <br />  
+                     <p align="center"><a href="index.php">Back To NGO</a></p>  
+                </form>  
+                
+            
+        </div>
+        </body>
+        
+        </html>
