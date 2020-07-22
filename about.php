@@ -67,9 +67,6 @@ include("php/slider.php");
 </section>
 
 
-
-<section class="about">
-
  <!-- Featured Causes || Support Nation -->
 <section class="about">
 
@@ -111,60 +108,41 @@ include("php/slider.php");
 
 <section class="about">
 
+
+
+
 <div class="container pt-5">
- <h2 class="text-center text-uppercase"> Our Core Team </h2>
+ <h2 class="text-center text-uppercase"> our team || Support Nation</h2>
 
-   <div class="row  pt-5">
-       <div class="col">
-
-       <div class="card border-success mb-3" style="max-width: 18rem;">
-          <div class="card-header bg-transparent border-success">Lorem, ipsum dolor.</div>
-           <div class="card-body text-success">
-               <!-- <h5 class="card-title">Success card title</h5> -->
-               <p class="card-text"> <img class="card-img-top" src="img/man-in-blue-clothing-feeding-an-old-man-3996723.jpg" alt="Card image cap"></p>
-           </div>
-        <div class="card-footer bg-transparent border-success">Lorem ipsum dolor sit amet consectetur.</div>
-      </div>
-
-       </div>
-       <div class="col">
-
-       <div class="card border-success mb-3" style="max-width: 18rem;">
-          <div class="card-header bg-transparent border-success">Women Empowerment</div>
-           <div class="card-body text-success">
-               <!-- <h5 class="card-title">Success card title</h5> -->
-               <p class="card-text"> <img class="card-img-top" src="img/0b32e1fa-df03-3333-0282-3c4069b3e47d.jpg" alt="Card image cap"></p>
-           </div>
-        <div class="card-footer bg-transparent border-success">I’m a feminist. What’s your superpower?</div>
-      </div>
-
-       </div>
-       <div class="col">
-
-       <div class="card border-success mb-3" style="max-width: 18rem;">
-          <div class="card-header bg-transparent border-success">Animal Welfare</div>
-           <div class="card-body text-success">
-               <!-- <h5 class="card-title">Success card title</h5> -->
-               <p class="card-text"> <img class="card-img-top" src="img/2.jpg"  alt="Card image cap"></p>
-           </div>
-        <div class="card-footer bg-transparent border-success">Giving Animals a new leash on life!</div>
-      </div>
-
-       </div>
-       <div class="col">
-
-       <div class="card border-success mb-3" style="max-width: 18rem;">
-          <div class="card-header bg-transparent border-success">Environment</div>
-           <div class="card-body text-success">
-               <!-- <h5 class="card-title">Success card title</h5> -->
-               <p class="card-text"> <img class="card-img-top" src="img/3.jpg" alt="Card image cap"></p>
-           </div>
-        <div class="card-footer bg-transparent border-success">The Earth is what we all have in common.”</div>
-      </div>
-
-       </div>
-  </div>
-     <center><a href="./join.php" class="btn btn-outline-info " role="button" aria-pressed="true">Join me</a></center>
+   
+  <div class="card-deck pt-5">
+ <div class="card">
+ <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="img/0b32e1fa-df03-3333-0282-3c4069b3e47d.jpg" alt="Card image cap"></p>
+   <div class="card-body">
+   <div class="card-header bg-transparent text-center">Education</div>
+     <p class="card-text">Education opens up the mind, expands it and allows you to improve your life in so many ways.</p>
+     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+   </div>
+ </div>
+ <div class="card">
+ <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="img/2.jpg" alt="Card image cap"></p>
+   <div class="card-body">
+   <div class="card-header bg-transparent text-center">Women Empowerment</div>
+     <p class="card-text"> There is a special place in hell for women who do not help other women.</p>
+     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+   </div>
+ </div>
+ <div class="card">
+ <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="img/3.jpg" alt="Card image cap"></p>
+   <div class="card-body">
+   <div class="card-header bg-transparent text-center">Environment</div>
+     <p class="card-text">The Earth is what we all have in common.</p>
+     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+   </div>
+ </div>
+</div><br/>
+  <center>
+  <a href="./join.php" class="btn btn-outline-info " role="button" aria-pressed="true">Join Me :) </a></center>
 </div>
 
 </section>

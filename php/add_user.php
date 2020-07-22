@@ -18,7 +18,7 @@
            $username = mysqli_real_escape_string($connect, $_POST["username"]);  
            $password = mysqli_real_escape_string($connect, $_POST["password"]);  
            $password = password_hash($password, PASSWORD_DEFAULT);  
-           $query = "INSERT INTO login_users (user, password) VALUES('$username', '$password')";  
+           $query = "INSERT INTO add_users (user, password) VALUES('$username', '$password')";  
            if(mysqli_query($connect, $query))  
            {  
                 echo '<script>alert("Registration Done")</script>';  

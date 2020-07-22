@@ -30,6 +30,7 @@ if(!isset($_SESSION['user'])){
                     
                 <form>
                     <div class="row">
+                    
                         <div class="col">
                              <label for="">Name :</label>
                         </div>

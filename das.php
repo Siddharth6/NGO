@@ -107,7 +107,7 @@ if(!isset($_SESSION['user'])){
                 </div>
             </div>
     <!-- action bar -->
-                    <div class="Respond" style="display:none;">
+                    <div class="Respond " style="display:none;">
                       
                     <?php include('show_admin.php');?>
 

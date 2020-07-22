@@ -33,7 +33,7 @@ return $filter_Result;
 
 <h2 class ="text-center text-info mt-5" style="margin-top:6rem;"> <u> WELCOME : <?php echo $_SESSION['user'];?>.</u></h2>
   
-<div style="margin-left:20px;margin-right:20px;margin-top:4rem;">
+<div class="table-responsive" style="margin-left:20px;margin-right:20px;margin-top:4rem;">
 <a  class="btn btn-primary" href="../das.php" role="button">Dashbord</a>
 <br/> <br/> 
 

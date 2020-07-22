@@ -29,7 +29,7 @@ return $filter_Result;
 
 
 
-<h2 class ="text-center text-info"> <u> WELCOME : <?php echo $_SESSION['user'];?>.</u></h2>
+
   
 <div style="margin-left:20px;margin-right:20px;">
 <a  class="btn btn-primary" href="das.php" role="button">Dashbord</a>
@@ -37,7 +37,7 @@ return $filter_Result;
 
     
     
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive">
        <thead>
        <tr>
             <th>ID</th>
