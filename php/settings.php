@@ -18,7 +18,7 @@ if(!isset($_SESSION['user'])){
       <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
       <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
       <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Add user</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-manage" role="tab" aria-controls="manage">manage user </a>
+      <a class="list-group-item list-group-item-action"  href="./mange.php"  aria-controls="manage">manage user </a>
     </div>
   </div>
   <div class="col-8">
@@ -31,11 +31,6 @@ if(!isset($_SESSION['user'])){
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
       <?php include("./add_user.php");?>
       </div>
-
-      <div class="tab-pane fade" id="list-manage" role="tabpanel" aria-labelledby="list-settings-list">
-      <?php include("./mange.php");?>
-      </div>
-
     </div>
   </div>
 </div>
