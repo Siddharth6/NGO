@@ -5,7 +5,7 @@ include("./admin_nav.php");
 session_start();
 error_reporting(0);
 if(!isset($_SESSION['user'])){
-header('location:index.php');
+header('location:../index.php');
 }
 if(isset($_POST['search']))
 {

@@ -1,13 +1,17 @@
 <?php include("php/links.php");?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" type="text/css" media="screen" />
 <?php include_once("php/navbar.php");?>
 <?php include('php/slider.php');?>
+<br/>
 
-<p class="text-center text-danger mb-5" style="font-family: 'Abril Fatface', cursive;">Home | Event </p>
-
-
-<div class="row" style="margin-top:1rem;">
- 
-	<?php
+<style>
+body{
+	margin:0;
+	padding:0;
+}
+ </style>
+<?php
     error_reporting(0);
 	$con = mysqli_connect('localhost','root','');
 	 mysqli_select_db($con,'ngo');
@@ -25,43 +29,37 @@
 		while($row= mysqli_fetch_array($queryfire)){
 		
 			?>
-			
-		<div class="col-lg-3 col-md-3 col-sm-12">
-			
-			<form>
-				<div class="card" style="margin-top:4rem;margin-left:4rem;">
-					<h6 class="card-title bg-info text-white p-2 text-uppercase"> <?php echo $row["title"];  ?> </h6>
-					
-
+		 <div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="card"style="width: 18rem;">
 					<div class="card-body">
-						<img src="<?php  echo "php/" .$row["filepath"];  ?>" alt="<?php echo $row["filename"]; ?>" class="img-fluid mb-2 img-thumbnail" >
-                        
-
-						<h6><?php echo $row["shortdescription"]; ?> </h6> <br/>
-
-						<h6> Posted Date : <?php echo $row["Datetime"];  ?> </h6> 
- 
-
+						<a href="<?php echo "php/" .$row["filepath"]; ?>" data-fancybox="gallery" data-caption="<?php echo $row["file_name"]; ?>" class="img-fluid  img-thumbnail" style="width:200px; hieght:100px;" >
+							<img src="<?php echo "php/" .$row["filepath"]; ?>" alt="" class="img-fluid  img-thumbnail" style="width:200px; hieght:100px;" />
+						</a>
+						
 					</div>
-						<div class="btn-group d-flex">
-						<a href="<?php echo "readmore.php?id=".$row['id'];?>" class="btn btn-outline-primary flex-fill" role="button" aria-pressed="true">Read more</a>
-							<!-- <button class="btn btn-success flex-fill"></button>  -->
-						</div>
-
-
+					</div>
 				</div>
-			</form>
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase text-center"><?php echo $row["title"];  ?></h5>
+							<p class="text-capitalize text-justify font-weight-normal"><?php echo $row["shortdescription"]; ?> </p> <br/>
+							<a href="<?php echo "readmore.php?id=".$row['id'];?>" class="btn btn-outline-primary flex-fill" role="button" aria-pressed="true">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
 
-		</div>
-
-
-	<?php		
-		}
+<?php		
 	}
-	?>
-</div>
-<br/>
+}
+?>
 
-
+<script>
+  $("[data-fancybox]").fancybox();
+</script>
 
 <?php include("php/footer.php");?>
