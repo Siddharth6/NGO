@@ -14,7 +14,7 @@ mysqli_query($link,"UPDATE add_users set id='" . $_POST['id'] . "', user='" . $_
 $message = "
 
 
-<script>alert('Record was update successfully.');document.location ='../das.php#Respond'; </script>
+<script>alert('Record was update successfully.');document.location ='./mange.php'; </script>
 
 
 ";
