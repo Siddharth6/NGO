@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" type="text/css" media="screen" />
     <title>Events</title>
   </head>
   <body>
@@ -32,7 +33,7 @@
 		
 			?>
 		 <div class="container py-5">
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3" style="max-width: 600px;">
            <div class="row g-0">
             <div class="col-md-4">
             	<img src="<?php echo "php/" .$row["filepath"]; ?>" alt="" data-fancybox="gallery"  class="img-fluid" style="width:auto; hieght:90vh;"/>			
@@ -52,7 +53,7 @@
         </div>
         </div>
 
-
+     
     </div>
 
 <?php		

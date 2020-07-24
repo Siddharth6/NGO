@@ -24,7 +24,7 @@
             $imageThumbURL = 'php/uploads/'.$row["file_name"]; 
             $imageURL = 'php/uploads/'.$row["file_name"]; 
     ?>
-		<a href="<?php echo $imageURL; ?>" data-fancybox="gallery" data-caption="<?php echo $row["file_name"]; ?>" >
+		<a href="<?php echo $imageURL; ?>" data-fancybox="gallery" data-caption="<?php echo $row["file_name"]; ?>"  class="py-4">
 			<img src="<?php echo $imageThumbURL; ?>" alt="" />
 		</a>
     <?php } 

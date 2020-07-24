@@ -8,27 +8,25 @@ include("php/slider.php");
 
  <div class="container pt-5">
  <h3 class=" text-center text-uppercase">About</h3>
-    <div class="row pt-5">
-        <div class="col-6">
-            <img src="img/favicon1.png" style="width:50%"/>
-        </div>
-        <div class="col-6">
-        <div class="card border-success " style="max-width: 28rem;">
-        <div class="card-header">Who am I ?</div>
-        <div class="card-body text-dark">
-            <h5 class="card-title">AVADH JANKALYAN SAMITI</h5>
-            <hr>
-            <p class="card-text">
+
+    <div class="row no-gutters about py-5">
+        <div class="col-sm-6 col-md-8">.<img src="img/favicon1.png" style="width:30%"/></div>
+        <div class="col-6 col-md-4">
+        <p class="card-text">
             Our NGO has played a crucial role in helping the needy in society. We care and provide education to the
              children living in the SLUMS Area and even providing education to those people who are unable to go to school. 
              Our leading causes are providing primary education, 
             vocational training, self-employment, legal aid, and protection for women and self -awareness programs.
             </p>
         </div>
-        </div>
-        </div>
     </div>
+  
 </div>
+
+
+
+
+
 
 </section>
 

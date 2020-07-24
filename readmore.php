@@ -21,11 +21,12 @@ $result = mysqli_query($link, $sql);
      <div class="container">
         <div class=" card " style="margin-top:7rem;">
                 	   
-        <h5 class="card-title text-uppercase text-center text-dark"  style="margin-top:3rem;"><?php echo $row['title'];?></h5>
+        <h5 class="card-title text-uppercase text-center text-dark"  style="margin-top:3rem; "><?php echo $row['title'];?></h5>
                      <br/>
                      <div class="card-body">
                      <div class="container">
-					               <img src="<?php echo "php/".$row['filepath']; ?>" alt="<?php echo $row["filename"]; ?>" class="rounded img-fluid"/></div> <br/><br/>
+                                   <img src="<?php echo "php/".$row['filepath']; ?>" alt="<?php echo $row["filename"]; ?>" class="rounded img-fluid"/>
+                    </div> <br/><br/>
 
                           <p class="card-text text-capitalize text-justify"><?php echo $row['shortdescription'];?></p><br/>
 
