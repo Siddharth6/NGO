@@ -28,9 +28,9 @@ $result = mysqli_query($link, $sql);
                                    <img src="<?php echo "php/".$row['filepath']; ?>" alt="<?php echo $row["filename"]; ?>" class="rounded img-fluid"/>
                     </div> <br/><br/>
 
-                          <p class="card-text text-capitalize text-justify"><?php echo $row['shortdescription'];?></p><br/>
+                          <p class="card-text text-capitalize lead text-justify"><?php echo $row['shortdescription'];?></p><br/>
 
-                          <p class="card-text text-capitaliz text-justifye"><?php echo $row['description'];?></p>
+                          <p class="card-text text-capitaliz lead text-justifye"><?php echo $row['description'];?></p>
                        
                           <p class="card-text"><small class="text-muted">  publish date  <?php echo $row['Datetime'];?></small></p>
 					    
