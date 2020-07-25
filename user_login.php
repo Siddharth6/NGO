@@ -26,7 +26,7 @@
                      {  
                           //return true;  
                           $_SESSION["user"] = $username;  
-                          header("location:das.php");  
+                          header("location:user/das.php");  
                      }  
                      else  
                      {  
