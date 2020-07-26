@@ -7,6 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e7d46cc211.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/text.css">
    
     <title>Events</title>
   </head>
@@ -60,7 +63,14 @@
 }
 ?>
 
-
+<!-- social icon -->
+<div class="icon-bar py-2">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
    
 
     <!-- Optional JavaScript -->

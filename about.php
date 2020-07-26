@@ -4,13 +4,15 @@ include("php/navbar.php");
 include("php/slider.php");
 ?>
 <p class="text-center text-danger mb-5" style="font-family: 'Abril Fatface', cursive;">Home | About </p>
+<link rel="stylesheet" href="css/text.css">
+
 <section class="about">
 
  <div class="container pt-5">
  <h3 class=" text-center text-uppercase">About</h3>
     <div class="row pt-5">
         <div class="col-6">
-            <img src="img/banner2.jpg" style="width:60%;height:50%;"/>
+            <img src="img/banner2.jpg" style="width:50%;height:40%;"/>
         </div>
         <div class="col-6">
         <div class="card border-success " style="max-width: 28rem;">
@@ -104,6 +106,14 @@ include("php/slider.php");
   <a href="./show.php" class="btn btn-outline-info " role="button" aria-pressed="true">Read More</a></center>
 </div>
 </section>
+<!-- social icon -->
+<div class="icon-bar py-2">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
 <!-- oour team -->
 
 <section class="about">
@@ -117,7 +127,8 @@ include("php/slider.php");
    
   <div class="card-deck pt-5">
  <div class="card">
- <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="img/0b32e1fa-df03-3333-0282-3c4069b3e47d.jpg" alt="Card image cap"></p>
+ <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="https://lenskills.com/img/team/team-1-rbg.jpg" alt="Card image cap"></p><br/>
+ <h6 class="text-center">Prabhakar Singh</h6>
    <div class="card-body">
    <div class="card-header bg-transparent text-center">Education</div>
      <p class="card-text">Education opens up the mind, expands it and allows you to improve your life in so many ways.</p>
@@ -133,7 +144,8 @@ include("php/slider.php");
    </div>
  </div>
  <div class="card">
- <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="img/3.jpg" alt="Card image cap"></p>
+ <p class="card-text"> <img class="img-fluid img-thumbnail card-img-top" src="https://avatars0.githubusercontent.com/u/39899291?s=400&u=f0ddac09d1e15fa6172a7cec6aad45b9b9ab11e4&v=4" alt="Card image cap"></p><br/>
+ <h6 class="text-center">Siddharth</h6>
    <div class="card-body">
    <div class="card-header bg-transparent text-center">Environment</div>
      <p class="card-text">The Earth is what we all have in common.</p>

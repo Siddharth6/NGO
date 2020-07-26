@@ -3,13 +3,14 @@ include("php/links.php");
 include("php/navbar.php");
 include("php/slider.php");
 ?>
+<link rel="stylesheet" href="css/text.css">
 
 <section class="about">
 
  <div class="container pt-5">
  <h3 class=" text-center text-uppercase">About</h3>
 
-    <div class="row no-gutters about py-5">
+    <div class="row no-gutters about py-5 mobli">
         <div class="col-sm-6 col-md-8">.<img src="img/favicon1.png" style="width:30%"/></div>
         <div class="col-6 col-md-4">
         <p class="card-text">
@@ -23,11 +24,6 @@ include("php/slider.php");
   
 </div>
 
-
-
-
-
-
 </section>
 
 
@@ -36,7 +32,7 @@ include("php/slider.php");
  <div class="container pt-5">
      <h3 class=" text-center text-uppercase">gallery</h3>
                                
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
 
@@ -89,6 +85,14 @@ include("php/slider.php");
 
 </section>
 
+<!-- social icon -->
+<div class="icon-bar py-2">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
 
 <!-- Featured Causes || Support Nation -->
 <section class="about">
