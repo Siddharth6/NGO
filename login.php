@@ -1,10 +1,12 @@
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "ngo");  
  session_start();  
- if(isset($_SESSION["user"]))  
- {  
-      header("location:das.php");  
- }  
+
+ $error ="";
+//  if(isset($_SESSION["user"]))  
+//  {  
+//       header("location:das.php");  
+//  }  
 
  if(isset($_POST["login"]))  
  {  
@@ -26,18 +28,39 @@
                      {  
                           //return true;  
                           $_SESSION["user"] = $username;  
-                          header("location:das.php");  
+                          $_SESSION['role'] = $row['role'];
+
+                          if(empty($_SESSION['role'])){
+                              header("Location:./index.php");
+                              die();
+                          }
+                          if($_SESSION['role']=="admin"){
+                              header("Location:./das.php");
+                             die();
+                         }
+
+                         if($_SESSION['role']=="member"){
+                              header("Location:./user/das.php");
+                             die();
+                         }
+
+                     
                      }  
                      else  
                      {  
                           //return false;  
-                          echo '<script>alert("Wrong User Details")</script>';  
+                          $error ="<div class='alert alert-danger text-center' role='alert'>
+                                        Wrong User Details 
+                                   </div>";
                      }  
                 }  
            }  
            else  
            {  
-                echo '<script>alert("Wrong User Details")</script>';  
+                $error ="<div class='alert alert-danger text-center' role='alert'>
+                               Wrong User Details
+                         </div>";
+
            }  
       }  
  }  
@@ -47,11 +70,12 @@
            
            
             <div class="container card border-primary  mb-3" style="width:500px;margin-top:12rem;">  
+            <p>   <?php echo $error;?></p>
             <img src="img/favicon1.png"  class="img-thumbnail img-fluid" style="width:100px;margin-top:16px;margin-left:170px;"/>
             
                 <h3 class="text-center text-primary pt-4">AVADH JANKALYAN SAMITI</h3>  
                 <br />  
-                  
+                
                 <h3 align="center">Login</h3>  
                 <br />  
                 <form method="post" action="">  
@@ -63,6 +87,7 @@
                      <br />  
                      <input type="submit" name="login" value="Login" class="btn btn-info" />  
                      <br />  
+                    
                      <p align="center"><a href="index.php">Back To NGO</a></p>  
                 </form>  
                 

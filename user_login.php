@@ -16,7 +16,7 @@
       {  
            $username = mysqli_real_escape_string($connect, $_POST["username"]);  
            $password = mysqli_real_escape_string($connect, $_POST["password"]);  
-           $query = "SELECT * FROM add_users WHERE user = '$username'";  
+           $query = "SELECT * FROM login_users WHERE user = '$username'";  
            $result = mysqli_query($connect, $query);  
            if(mysqli_num_rows($result) > 0)  
            {  
@@ -26,7 +26,23 @@
                      {  
                           //return true;  
                           $_SESSION["user"] = $username;  
-                          header("location:user/das.php");  
+                          $_SESSION['role'] = $row['role'];
+
+                          if(empty($_SESSION['role'])){
+                              header("Location:./index.php");
+                              die();
+                          }
+                          if($_SESSION['role']=="admin"){
+                              header("Location:./das.php");
+                             die();
+                         }
+
+                         if($_SESSION['role']=="member"){
+                              header("Location:./user/das.php");
+                             die();
+                         }
+
+                     
                      }  
                      else  
                      {  

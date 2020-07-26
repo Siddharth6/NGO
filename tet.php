@@ -17,10 +17,10 @@
   <?php
     error_reporting(0);
 	$con = mysqli_connect('localhost','root','');
-	 mysqli_select_db($con,'ngo');
+	    mysqli_select_db($con,'ngo');
 
 	
-
+ 
 
 	$query = " SELECT `filepath`,`id`, `filename`, `title`, `description`, `shortdescription`,`Datetime` FROM `gallery` order by id ASC ";
 
@@ -60,10 +60,6 @@
 	}
 }
 ?>
-
-
-
-   
 
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->

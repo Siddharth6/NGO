@@ -5,13 +5,8 @@ if(!isset($_SESSION['user'])){
     header('location:../login.php?error= Try again');
 }
 
-
-
-
-
 // img 
 $link = mysqli_connect('localhost','root','','ngo') or die("Error ".mysqli_error($link));
-
 
 $filename=$_FILES["Filename"]["name"];
 $tmpname= $_FILES["Filename"]["tmp_name"]; 
@@ -22,9 +17,6 @@ $filetitle = $_POST['title'];
 
 $fileDescription = $_POST['Description'];
 $fileshortdescription =$_POST['shortdescription'];
-
-
- 
 
  if($result) { 
     //echo "Your file <html><b><i>".$folder."</i></b></html> has been successfully uploaded";       
