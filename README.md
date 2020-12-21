@@ -13,7 +13,7 @@
         the SLUMS Area and even providing education to those people who are unable to go to school. Our leading causes are providing primary education, 
         vocational training, self-employment, legal aid, and protection for women and self -awareness programs.
 	
- -Demo 
+ - Demo 
  
     http://Avadhjankalyansamiti.in
   
